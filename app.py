@@ -17,7 +17,7 @@ app.layout = html.Div([
         html.A([
             html.Img(src='/assets/logo_white.svg', style={'maxHeight': '100px'})  # Adjust the size as needed
         ], href='http://www.kenex.co.nz', target='_blank'),
-        html.H1('Exploration Information and Management System', style={'margin': '0 20px'})  # Adjust margin as needed
+        html.H1('EIS Target Management Dashboard', style={'margin': '0 20px'})  # Adjust margin as needed
     ], style={'display': 'flex', 'alignItems': 'center', 'justifyContent': 'space-between', 'padding': '10px'}),
 
     # Section for embedding the ArcGIS dashboard within an iframe
