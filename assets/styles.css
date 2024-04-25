@@ -1,0 +1,105 @@
+body {
+    background-image: url('https://kenex.com.au/wp-content/themes/kenex/assets/img/map_bg.svg');
+    background-color: #1E4490;
+    background-repeat: repeat;
+    background-position: center;
+    /* transform: translate(0, 3764px); */
+    clear: both;
+    margin: 0 auto; /* Centers the content */
+    max-width: 1200px; /* Sets a max-width for the body content */
+    padding: 0 20px; /* Adds horizontal padding */
+}
+
+h1 {
+    color: white;
+    font-size: 3vw;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    display: inline;
+    vertical-align: middle;
+}
+
+img {
+    width: 80%;
+    height: 100px;
+    padding-top: 10px;
+    padding-left: 10px
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 5%;
+    padding-right: 20%;
+}
+
+/* Adjustments for larger screens */
+@media only screen and (min-width: 1025px) {
+    body {
+        max-width: 90%; /* Allows for some space on either side on large screens */
+    }
+
+    #tree_map, #map {
+        flex: 1 1 calc(50% - 20px); /* Adjusts size for larger screens */
+    }
+}
+
+/* Adjustments for smaller screens */
+@media only screen and (max-width: 1024px) {
+    #tree_map, #map {
+        flex: 1 1 100%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    h1 {
+        font-size: 8vw;
+    }
+
+    .dropdown, .dropdown-container, .stats, .scatter-plot, .maps-container, #table_container {
+        padding: 10px;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 10px;
+        text-align: left;
+    }
+
+    #tree_map, #map {
+        min-height: 250px;
+    }
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 5%;
+}
+
+#btn_csv {
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 13px 23px;
+    border: 1px solid #222222;
+    transition: box-shadow 0.2s ease 0s, -ms-transform 0.1s ease 0s, -webkit-transform 0.1s ease 0s, transform 0.1s ease 0s;
+    background: #fff;
+    color: #222222;
+}
+
+#btn_csv:hover {
+    border-color: white;
+    background: #808080;
+    color: white;
+}
+
+.map-container, #table_container {
+    width: 95%;
+    overflow-x: auto;
+}

@@ -1,0 +1,167 @@
+body {
+    background-image: url('https://kenex.com.au/wp-content/themes/kenex/assets/img/map_bg.svg'); /* Replace URL_OF_YOUR_IMAGE with the actual URL of your image */
+    background-color: #1E4490; /* This will be the background color if the image is not available */
+    background-repeat: repeat; /* This will prevent the image from repeating */
+    background-position: center; /* This will center your image in the body element */
+    transform: translate(0, 3764);
+    clear: both;
+}
+
+
+h1 {
+    color: white;
+    font-size: 3vw;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    display: inline;
+    vertical-align: middle;
+}
+
+img {
+    width: 20%;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 5%;
+    padding-right: 20%;
+}
+
+.dropdown {
+    width: 70%;
+    padding-left: 10%;
+    padding-top: 3%;
+    align-items: center;
+}
+
+.dropdown-container {
+    width: 100%;
+    padding: 10px;
+    align-items: center;
+}
+
+.stats {
+    width: 100%;
+    display: block;
+    padding-right: 10%;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5vw;
+    color: white;
+}
+
+.scatter-plot, #table_container {
+    padding: 2%;
+}
+
+.maps-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+#tree_map, #map {
+    flex: 1 1 45%;
+    max-width: 1200px;
+    max-height: 800px;
+    /* margin: 5px; */
+}
+
+/* For smaller screens */
+@media only screen and (max-width: 1024px) {
+    #tree_map, #map {
+        flex: 1 1 100%;
+        /* Other styles for smaller screens */
+    }
+}
+
+/* For larger screens */
+@media only screen and (min-width: 1025px) {
+    #tree_map, #map {
+        flex: 1 1 calc(50% - 20px);
+        /* Other styles for larger screens */
+    }
+}
+
+/* Media Query for Tablets and smaller screens */
+/* @media only screen and (max-width: 768px) {
+    #tree_map, #map {
+        flex: 1 1 100%;
+        min-height: 250px;
+    }
+} */
+
+/* Media Query for Mobile Devices */
+@media only screen and (max-width: 480px) {
+    h1 {
+        font-size: 8vw;
+    }
+
+    .dropdown, .dropdown-container, .stats, .scatter-plot, .maps-container, #table_container {
+        padding: 10px;
+    }
+
+    .style_cell {
+        fontSize: 16px;
+    }
+
+    .button-container {
+        justify-content: center;
+        margin-right: 0;
+    }
+
+    #btn_csv {
+        padding: 15px 20px;
+        font-size: 16px;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 10px;
+        text-align: left;
+    }
+
+    #tree_map, #map {
+        min-height: 250px;
+    }
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 5%;
+}
+
+#btn_csv {
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 13px 23px;
+    border: 1px solid #222222;
+    transition: box-shadow 0.2s ease 0s, -ms-transform 0.1s ease 0s, -webkit-transform 0.1s ease 0s, transform 0.1s ease 0s;
+    background: #fff;
+    color: #222222;
+}
+
+#btn_csv:hover {
+    border-color: white;
+    background: #808080;
+    color: white;
+}
+
+.map-container, #table_container {
+    width: 95%;
+    overflow-x: auto;
+}
+
+/* .dash-table-container {
+    width: 95%;
+    min-width: 300px;
+} */
